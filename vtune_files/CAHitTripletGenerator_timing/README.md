@@ -1,4 +1,4 @@
-#CAHitTripletGenerator
+# CAHitTripletGenerator
 
 Results here timed around the function hitNTuplets. 
 
