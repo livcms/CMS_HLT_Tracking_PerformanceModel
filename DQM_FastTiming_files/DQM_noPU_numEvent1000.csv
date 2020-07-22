@@ -1,4 +1,4 @@
-Module,Average time/event (ms) at 1000 events
+,Module,Average time/event (ms) at 1000 events
 0,event ,647.98
 1,explicit ,670.94
 2,overhead ,27.44
