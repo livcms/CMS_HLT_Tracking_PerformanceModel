@@ -44,7 +44,10 @@ vtune -collect-with runsa -start-paused -quiet -knob enable-stack-collection=tru
 To analyse cache misses etc. use
 ``` 
 vtune -collect memory-access -start-paused -quiet cmsRun step3_tracking/cfg.py maxEvents=100 nThreads=1 inputFiles=file:raw/raw8_PU200_numEvent500.root outputFile=file:tracking.root
+``` 
+
 Run vtune gui with 
+
 ```
 vtune-gui
 ``` 
