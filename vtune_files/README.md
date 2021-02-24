@@ -46,6 +46,13 @@ To analyse cache misses etc. use
 vtune -collect memory-access -start-paused -quiet cmsRun step3_tracking/cfg.py maxEvents=100 nThreads=1 inputFiles=file:raw/raw8_PU200_numEvent500.root outputFile=file:tracking.root
 ``` 
 
+To look at branching, such as branch mispredictions and other hardware events, one can run something like
+```
+vtune -collect-with runsa -start-paused -knob event-config=ICACHE_16B.IFDATA_STALL,BR_INST_RETIRED.ALL_BRANCHES,BR_MISP_RETIRED.NEAR_TAKEN,BR_MISP_RETIRED.ALL_BRANCHES cmsRun step3_RAW2DIGI_RECO_VALIDATION_DQM.py 
+``` 
+with a full description of the possible configurations [here](https://download.01.org/perfmon/index/skylake.html).
+
+
 Run vtune gui with 
 
 ```
